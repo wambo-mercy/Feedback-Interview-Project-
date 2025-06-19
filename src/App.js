@@ -1,23 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import FeedbackForm from './components/FeedbackForm';
+import FeedbackList from './components/FeedbackList';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="min-h-screen bg-black text-light flex flex-col items-center justify-start py-10 px-4">
+      <h1 className="text-4xl font-bold text-primary mb-10">Simple Feedback Manager</h1>
+      <div className="w-full max-w-2xl space-y-6">
+        <FeedbackForm />
+        <FeedbackList />
+      </div>
     </div>
   );
 }
